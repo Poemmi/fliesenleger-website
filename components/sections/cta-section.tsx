@@ -1,0 +1,65 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Phone, Mail, MessageCircle } from "lucide-react";
+import { siteConfig } from "@/content/site";
+
+export function CTASection() {
+  return (
+    <section className="bg-primary py-16 text-primary-foreground">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            Bereit für Ihr Projekt?
+          </h2>
+          <p className="mb-8 text-lg opacity-90">
+            Kontaktieren Sie uns jetzt für eine kostenlose Erstberatung. <br />
+            Wir freuen uns auf Ihre Anfrage!
+          </p>
+
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/kontakt">Kostenlos anfragen</Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              asChild
+            >
+              <a href={`tel:${siteConfig.contact.phone}`}>
+                <Phone className="mr-2 h-5 w-5" />
+                {siteConfig.contact.phoneDisplay}
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              asChild
+            >
+              <a
+                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                WhatsApp
+              </a>
+            </Button>
+          </div>
+
+          <p className="mt-8 text-sm opacity-75">
+            <Mail className="mr-1 inline h-4 w-4" />
+            Oder per E-Mail:{" "}
+            <a
+              href={`mailto:${siteConfig.contact.email}`}
+              className="underline underline-offset-4 hover:opacity-80"
+            >
+              {siteConfig.contact.email}
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
