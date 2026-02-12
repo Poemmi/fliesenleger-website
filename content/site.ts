@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Mustermann Fliesenleger",
+  name: "Daniel Wlochowitz Fliesenleger",
   title: "Professionelle Fliesenarbeiten in Limburg, Wiesbaden & Umgebung",
   description:
     "Ihr Experte für hochwertige Fliesenarbeiten. Badsanierung, Großformatfliesen, Naturstein und mehr. Sauber, präzise, authentisch.",

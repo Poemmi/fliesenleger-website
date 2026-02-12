@@ -5,8 +5,27 @@ import { siteConfig } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 to-background py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden py-20 sm:py-28">
+      {/* Modern Background with Gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-primary/5" />
+      
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large gradient orbs */}
+        <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-gradient-to-tr from-blue-400/10 to-primary/10 blur-3xl" />
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" 
+             style={{
+               backgroundImage: `linear-gradient(to right, hsl(217 91% 35% / 0.1) 1px, transparent 1px),
+                                linear-gradient(to bottom, hsl(217 91% 35% / 0.1) 1px, transparent 1px)`,
+               backgroundSize: '4rem 4rem'
+             }} 
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           {/* Badge */}
           <div className="mb-8 inline-flex items-center rounded-full border bg-background px-4 py-1.5 text-sm font-medium shadow-sm">

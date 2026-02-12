@@ -32,8 +32,11 @@ export function ServicesGrid() {
   const featuredServices = leistungen.slice(0, 6);
 
   return (
-    <section className="bg-background py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden py-20">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-white" />
+      
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">

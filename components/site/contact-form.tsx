@@ -67,7 +67,7 @@ export function ContactForm() {
           message: result.message,
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",

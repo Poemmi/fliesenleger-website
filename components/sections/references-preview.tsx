@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -11,8 +10,14 @@ export function ReferencesPreview() {
   const featuredReferences = referenzen.slice(0, 3);
 
   return (
-    <section className="bg-muted/40 py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden py-20">
+      {/* Modern background with subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-blue-50/40" />
+      
+      {/* Decorative element */}
+      <div className="absolute top-20 right-10 h-64 w-64 rounded-full bg-gradient-to-br from-primary/10 to-transparent blur-3xl" />
+      
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">

@@ -5,8 +5,17 @@ import { siteConfig } from "@/content/site";
 
 export function CTASection() {
   return (
-    <section className="bg-primary py-16 text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden py-16 text-primary-foreground">
+      {/* Modern gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-blue-700" />
+      
+      {/* Decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-blue-400/20 blur-3xl" />
+      </div>
+      
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Bereit für Ihr Projekt?

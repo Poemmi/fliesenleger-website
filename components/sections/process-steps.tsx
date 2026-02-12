@@ -29,8 +29,14 @@ const steps = [
 
 export function ProcessSteps() {
   return (
-    <section className="bg-background py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden py-20">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-50/50 via-white to-white" />
+      
+      {/* Decorative blob */}
+      <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-gradient-to-tr from-primary/5 to-transparent blur-3xl" />
+      
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
