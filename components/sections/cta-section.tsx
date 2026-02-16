@@ -31,8 +31,7 @@ export function CTASection() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className="bg-white text-primary border-2 border-white hover:bg-white/90 hover:scale-105 transition-transform"
               asChild
             >
               <a href={`tel:${siteConfig.contact.phone}`}>
@@ -42,8 +41,7 @@ export function CTASection() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className="bg-white text-primary border-2 border-white hover:bg-white/90 hover:scale-105 transition-transform"
               asChild
             >
               <a
